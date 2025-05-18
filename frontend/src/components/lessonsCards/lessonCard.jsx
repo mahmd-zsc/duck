@@ -9,7 +9,7 @@ import img8 from "../../../images/download__5_-removebg-preview.png";
 
 function LessonCard({ title, level, wordsNumber, emoji, onClick }) {
   const funImages = [img1, img3, img4, img5, img7, img8];
-  const [randomImage, setRandomImage] = useState(
+  const [randomImage] = useState(
     funImages[Math.floor(Math.random() * funImages.length)]
   );
   return (

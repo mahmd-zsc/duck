@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { clearQuizzes, fetchGeneratedQuizzes } from "../redux/slices/quizSlice";
+import {  fetchGeneratedQuizzes } from "../redux/slices/quizSlice";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 const correctSound = new Audio("../../sounds/correct.mp3");
@@ -39,8 +39,7 @@ export default function Questions() {
   const [correctAnswer, setCorrectAnswer] = useState(null);
   const [nextQuiz, setNextQuiz] = useState(false);
   const [message, setMessage] = useState("");
-  const [startQuiz, setStartQuiz] = useState(false);
-  const { quizzes, loading, error } = useSelector((state) => state.quiz);
+  const { quizzes, loading } = useSelector((state) => state.quiz);
 
   const handleCheckAnswer = () => {
     handleAnswer(userAnswer);

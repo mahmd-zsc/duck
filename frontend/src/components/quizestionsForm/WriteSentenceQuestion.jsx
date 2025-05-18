@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GermanSpecialCharsButtons from "./GermanSpecialCharsButtons";
 
-/**
- * Props:
- *  - question     : {question: string, answer: string, pronunciation?: string}
- *  - userAnswer   : string
- *  - setUserAnswer: fn
- *  - nextQuiz     : boolean  (true بعد ما يضغط "تحقّق" أو ينتقل للسؤال التالي)
- *  - setMessage   : fn       (عشان نعرض الإجابة الصح لو غلط)
- */
+
 function WriteSentenceQuestion({
   question,
   userAnswer,

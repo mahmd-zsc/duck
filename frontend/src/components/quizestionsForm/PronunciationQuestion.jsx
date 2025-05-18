@@ -5,7 +5,6 @@ function PronunciationQuestion({
   userAnswer,
   setUserAnswer,
   nextQuiz,
-  correctAnswer,
 }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [shuffledOptions, setShuffledOptions] = useState([]);

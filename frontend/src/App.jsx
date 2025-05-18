@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import Words from "./pages/Words";
 import Solution from "./pages/Solution";
 import Header from "./components/Header/Header";
-import Footer from "./components/footer/footer";
 import AddLesson from "./pages/AddLesson";
 import LessonDetail from "./pages/LessonDetail";
 import Sidebar from "./components/sidebar/sidebar";

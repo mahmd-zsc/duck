@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
-import { setError, setLoading, setQuizzes } from "../../redux/slices/quizSlice";
-import { generateQuizzesApi } from "../../redux/apiCalls/quizApi";
 
 function LessonModal({ lesson, onClose }) {
   const [groupSize, setGroupSize] = useState(5);
@@ -11,7 +8,6 @@ function LessonModal({ lesson, onClose }) {
 
   const totalGroups = Math.ceil(lesson.wordsNumber / groupSize);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -31,20 +27,7 @@ function LessonModal({ lesson, onClose }) {
   };
 
   const handleGenerateQuizzes = async () => {
-    // dispatch(setLoading());
-    // try {
-    //   const data = await generateQuizzesApi({
-    //     lessonId: lesson._id,
-    //     groupSize,
-    //     groupNumber: selectedGroup,
-    //   });
 
-    //   dispatch(setQuizzes(data.quizzes));
-    //   navigate("/quiz");
-    // } catch (err) {
-    //   dispatch(setError(err.message));
-    //   console.error(err.message);
-    // }
     navigate(
       `/questions?lessonId=${lesson._id}&groupSize=${groupSize}&groupNumber=${selectedGroup}`
     );

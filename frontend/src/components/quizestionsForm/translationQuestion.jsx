@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 function TranslationQuestion({
   question,
@@ -8,7 +8,6 @@ function TranslationQuestion({
 }) {
   const [shuffledOptions, setShuffledOptions] = useState([]);
   const [voices, setVoices] = useState([]);
-  const audioRef = useRef(null);
 
   // دالة خلط المصفوفة
   const shuffleArray = (array) => {

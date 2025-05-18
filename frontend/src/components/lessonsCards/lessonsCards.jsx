@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LessonCard from "./lessonCard";
-import LessonModal from "./lessonModal";
+import LessonModal from "./LessonModal";
 import img from "../../../images/download__3_-removebg-preview.png";
 import { MdOutlineAddCircleOutline } from "react-icons/md";
 import { Link } from "react-router-dom";

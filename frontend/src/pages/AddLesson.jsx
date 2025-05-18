@@ -27,6 +27,7 @@ function AddLesson() {
     try {
       await dispatch(addLesson(newLesson)).unwrap();
       setSuccess(true);
+    // eslint-disable-next-line no-unused-vars
     } catch (err) {
       setSuccess(false);
     }
